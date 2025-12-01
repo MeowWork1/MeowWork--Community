@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog MeowWork Community</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* Modal Style */
+.modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); z-index:1000; }
+.modal-content { background:white; margin:10% auto; padding:20px; width:80%; max-width:600px; border-radius:10px; position:relative; }
+.close { position:absolute; top:10px; right:15px; font-size:25px; cursor:pointer; }
+.card h3 { cursor:pointer; color:#FF4500; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MeowWork Community</h1>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="about.html">Tentang Kami</a>
+    <a href="programs.html">Kegiatan</a>
+    <a href="adopt.html">Adopsi</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Kontak</a>
+  </nav>
+</header>
+
+<section class="highlight">
+  <h2>Artikel & Kegiatan Terbaru</h2>
+  <div class="cards">
+    <!-- Card 1 -->
+    <div class="card">
+      <h3 onclick="openModal('artikel1')">Menyelamatkan 5 Kucing Jalanan</h3>
+      <p>Mei 2025 - Tim MeowWork berhasil menyelamatkan 5 kucing di Padang.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="card">
+      <h3 onclick="openModal('artikel2')">Program Sterilisasi Massal</h3>
+      <p>April 2025 - Sterilisasi massal dilakukan untuk mengurangi populasi kucing jalanan.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="card">
+      <h3 onclick="openModal('artikel3')">Workshop Edukasi Peduli Kucing</h3>
+      <p>Maret 2025 - Anak muda diajak berpartisipasi dalam workshop kreatif mengenai kepedulian kucing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<div id="artikel1" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('artikel1')">&times;</span>
+    <h2>Menyelamatkan 5 Kucing Jalanan</h2>
+    <p>Tim MeowWork berhasil menyelamatkan 5 kucing di Padang. Semua kucing kini mendapatkan perawatan awal, vaksin, makanan sehat, dan tempat aman sementara. Program ini mendapat dukungan sukarelawan lokal dan masyarakat Padang yang peduli terhadap kucing jalanan.</p>
+  </div>
+</div>
+
+<div id="artikel2" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('artikel2')">&times;</span>
+    <h2>Program Sterilisasi Massal</h2>
+    <p>Sterilisasi massal dilakukan untuk mengurangi populasi kucing jalanan secara humanis. Program ini mencakup vaksinasi, check-up kesehatan, dan edukasi masyarakat agar lebih peduli pada kucing di sekitarnya.</p>
+  </div>
+</div>
+
+<div id="artikel3" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('artikel3')">&times;</span>
+    <h2>Workshop Edukasi Peduli Kucing</h2>
+    <p>Anak muda diajak berpartisipasi dalam workshop kreatif, membuat konten video, foto, dan ilustrasi tentang kucing jalanan. Workshop bertujuan menumbuhkan empati, kreativitas digital, dan kesadaran peduli hewan di masyarakat Padang.</p>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 MeowWork Community | Alamat: Padang, Sumatera Barat</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Modal JS
+function openModal(id) { document.getElementById(id).style.display='block'; }
+function closeModal(id) { document.getElementById(id).style.display='none'; }
+</script>
+</body>
+</html>
